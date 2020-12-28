@@ -1,6 +1,7 @@
 let model = require('../model/index');
 let logger = require('../utils/logger');
 let url = require('url');
+let spells = require('spells');
 
 class ApiController {
     constructor() {}
@@ -19,8 +20,9 @@ class ApiController {
         res.end();
     }
 
-    /* Api callbacks */
-    func1(){
+    compile(req, res){
+        const parsedUrl = url.parse(req.url, true);
+        this.resolve(res, spells.compile(parsedUrl.query.code), 'text/json');
     }
 }
 

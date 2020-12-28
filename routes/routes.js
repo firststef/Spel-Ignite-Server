@@ -3,6 +3,6 @@ let apiController = require('../controller/apiController');
 let resourceController = require('../controller/resourceController');
 
 let router = new Router();
-router.get('/api/func1', apiController.func1.bind(apiController));
+router.get('/api/compile', apiController.compile.bind(apiController));
 
 module.exports = router;

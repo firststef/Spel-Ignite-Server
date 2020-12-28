@@ -6,13 +6,14 @@
   "scripts": {
     "lint": "eslint",
     "test": "node testing/testrun.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "tsc -b -w"
   },
   "author": "SPCCSG",
   "license": "ISC",
   "dependencies": {
     "http": "0.0.1-security",
-    "url": "^0.11.0"
+    "spells": "git+https://github.com/firststef/SPEL-Ignite.git"
   },
   "devDependencies": {
     "eslint": "^7.0.0"

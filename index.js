@@ -1,7 +1,7 @@
 const http = require('http');
-let router = require('../server/routes/routes');
-let model = require('../server/model/index');
-let logToFile = require('../server/utils/logger');
+let router = require('./routes/routes');
+let model = require('./model/index');
+let logToFile = require('./utils/logger');
 
 //Server
 const port = 80;
