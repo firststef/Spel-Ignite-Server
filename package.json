@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint",
     "test": "node testing/testrun.js",
-    "start": "node index.js",
-    "watch": "tsc -b -w"
+    "start": "node index.js"
   },
   "author": "SPCCSG",
   "license": "ISC",
