@@ -22,7 +22,7 @@ class ApiController {
 
     compile(req, res){
         const parsedUrl = url.parse(req.url, true);
-        this.resolve(res, spells.compile(parsedUrl.query.code), 'text/json');
+        this.resolve(res, parsedUrl.query.code? spells.compile(parsedUrl.query.code) : 'not found', 'text/json');
     }
 }
 

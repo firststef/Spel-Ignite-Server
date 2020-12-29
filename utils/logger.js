@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 function logToFile(msg){
+    return;
     msg = JSON.stringify(msg);
     fs.appendFile('twlogs/twproj-' + (new Date()).toString()
         .replace(/ /g, "_")
