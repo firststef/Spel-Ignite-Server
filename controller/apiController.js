@@ -24,7 +24,12 @@ class ApiController {
 
     compile(req, res){
         const parsedUrl = url.parse(req.url, true);
-        this.resolve(res, parsedUrl.query.code? spells.compile(parsedUrl.query.code) : 'not found', 'text/json');
+        let code = parsedUrl.query.code;
+        let result = 'not found';
+        if (code){
+            result = spells.compile(Buffer.from(code, "base64").toString('utf-8'));
+        }
+        this.resolve(res, result, 'text/json');
     }
 }
 

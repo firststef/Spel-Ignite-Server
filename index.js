@@ -6,7 +6,6 @@ let logToFile = require('./utils/logger');
 //Server
 const port = 80;
 function serverFunc(req, res) {
-    console.log('a');
     router.callRoute(req, res);
 }
 
